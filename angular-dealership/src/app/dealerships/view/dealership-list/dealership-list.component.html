@@ -1,0 +1,33 @@
+<div class="container">
+  <button (click)="generateUUIDAndNavigate()" class="vertical-center">Create new dealership</button>
+</div>
+<article class="text--justified">
+    <header><h2>Dealerships</h2></header>
+  
+    <table *ngIf="dealerships">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dealership of dealerships.dealerships">
+          <td>{{dealership.name}}</td>
+          <td>
+            <a [routerLink]="['/dealerships', dealership.id]">View</a>
+          </td>
+          <td>
+            <a [routerLink]="['/dealerships', dealership.id, 'edit']">Edit</a>
+          </td>
+          <td>
+            <button (click)="onDelete(dealership)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  

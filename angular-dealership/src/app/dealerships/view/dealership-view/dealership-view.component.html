@@ -1,0 +1,61 @@
+<article *ngIf="dealership">
+  <header><h2>{{ dealership.name }}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            Location:
+            <span>{{ dealership.location }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Render the car table only if there are cars -->
+    <table *ngIf="carItems().length > 0">
+      <thead>
+        <tr>
+          <th>Brand Name</th>
+          <th>Model name</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of carItems()">
+          <td>{{ car.brandName }}</td>
+          <td>{{ car.modelName }}</td>
+          <td>
+            <a [routerLink]="['/dealerships', dealershipID, 'cars', car.id]">View</a>
+          </td>
+          <td>
+            <a [routerLink]="['/dealerships', dealershipID, 'cars', car.id, 'edit']">Edit</a>
+          </td>
+          <td>
+            <button (click)="onDelete(car)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div>
+      <button (click)="generateUUIDAndNavigate()">Create new car</button>
+    </div>
+
+    <!-- If there are no cars, show a message -->
+    <div *ngIf="carItems().length === 0">
+      <p>No cars available for this dealership.</p>
+    </div>
+
+    <!-- Nested routes for cars will be rendered here -->
+    <router-outlet></router-outlet> <!-- This will render child components like car views -->
+
+  </div>
+</article>
+
+<div>
+  <button [routerLink]="'/dealerships/'">Return</button>
+</div>

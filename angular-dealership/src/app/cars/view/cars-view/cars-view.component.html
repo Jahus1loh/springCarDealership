@@ -1,0 +1,40 @@
+<article *ngIf="car">
+  <header><h2>{{car.brandName}} {{car.modelName}}</h2></header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-2">
+          <div class="col-6">
+            Production country
+          </div>
+          <div class="col-6">
+            <span>{{car.country}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Production year
+          </div>
+          <div class="col-6">
+            <span>{{car.productionYear}}</span>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-6">
+            Price
+          </div>
+          <div class="col-6">
+            <span>{{car.price}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <button [routerLink]="'/dealerships/'">Return</button>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,42 @@
+<article>
+    <header><h2>Add Dealership</h2></header>
+  
+    <form class="container" [formGroup]="dealershipForm" (submit)="onSubmit()">
+      <div class="row">
+        <div class="col-4 p-2">
+          <div>
+            <label for="name">Name:</label>
+            <input 
+              id="name" 
+              name="name"
+              type="text"
+              formControlName="name"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-4 p-2">
+          <div>
+            <label for="location">Location:</label>
+            <input 
+              id="location" 
+              name="location" 
+              type = "text"
+              formControlName = "location"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-2 p-2">
+          <button type="submit">Add Dealership</button>
+        </div>
+        <div class="col-2 p-2">
+          <button type="button" (click)="resetForm()">Reset</button>
+        </div>
+      </div>
+    </form>
+  </article>

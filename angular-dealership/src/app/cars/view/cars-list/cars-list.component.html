@@ -1,0 +1,35 @@
+<article class="text--justified">
+    <header><h2>Cars</h2></header>
+  
+    <table *ngIf="cars">
+      <thead>
+        <tr>
+          <th>Brand Name</th>
+          <th>Model name</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cars of cars.cars">
+          <td>{{cars.brandName}}</td>
+          <td>{{cars.modelName}}</td>
+          <td>
+            <a [routerLink]="['/cars', cars.id]">View</a>
+          </td>
+          <td>
+            <a [routerLink]="['/cars', cars.id, 'edit']">Edit</a>
+          </td>
+          <td>
+            <button (click)="onDelete(cars)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  
+  <div>
+    <button (click)="generateUUIDAndNavigateCars()">Create new car</button>
+  </div>
+  

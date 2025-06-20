@@ -1,0 +1,12 @@
+.new_dealership_container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+  }
+  
+.vertical-center {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

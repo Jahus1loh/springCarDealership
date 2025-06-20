@@ -1,0 +1,76 @@
+<article *ngIf="car">
+  <header><h2>Edit Car</h2></header>
+
+  <form class="container" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-4 p-2">
+        <label for="brandName">Brand name:</label>
+        <input
+          id="brandName"
+          name="brandName"
+          [(ngModel)]="car.brandName"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <label for="modelName">Model name:</label>
+        <input
+          id="modelName"
+          name="modelName"
+          [(ngModel)]="car.modelName"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <label for="country">Country:</label>
+        <input
+          id="country"
+          name="country"
+          [(ngModel)]="car.country"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <label for="productionYear">Production year:</label>
+        <input
+          id="productionYear"
+          name="productionYear"
+          [(ngModel)]="car.productionYear"
+          type="number"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 p-2">
+        <label for="price">Price:</label>
+        <input
+          id="price"
+          name="price"
+          [(ngModel)]="car.price"
+          type="number"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 p-2">
+        <button type="submit">Update</button>
+      </div>
+      <div class="col-2 p-2">
+        <button type="button" (click)="resetForm()">Reset</button>
+      </div>
+    </div>
+  </form>
+</article>
