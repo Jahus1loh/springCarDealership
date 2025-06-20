@@ -1,0 +1,15 @@
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/CategoryApplication.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/DTOs/GetDealershipResponse.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/DTOs/GetDealershipsResponse.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/DTOs/PatchDealershipRequest.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/DTOs/PutDealershipRequest.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/controllers/api/DealershipController.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/controllers/impl/DealershipDefaultController.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/entity/DealershipCategory.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/function/DealershipToResponseFunction.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/function/DealershipsToResponseFunction.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/function/RequestToDealershipFunction.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/function/UpdateDealershipWithRequestFunction.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/initialize/InitializeData.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/repositories/DealershipRepository.java
+/Users/janpastucha/Desktop/Studia/Sem5/ISA/ISA_CarDealership_Microservices/dealership/src/main/java/com/example/category/service/DealershipService.java

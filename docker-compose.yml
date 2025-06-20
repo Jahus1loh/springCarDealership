@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  dealership:
+    image: dealership:1.0.0-SNAPSHOT
+    restart: always
+
+  car:
+    image: car:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      RPG_DEALERSHIP_URL: "http://dealership:8080"
+
+  gateway:
+    image: gateway:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      RPG_DEALERSHIP_URL: "http://dealership:8080"
+      RPG_CAR_URL: "http://car:8080"
+      RPG_GATEWAY_HOST: "gateway:8080"
+
+  angular-dealership:
+    image: angular-dealership:1.0.0-SNAPSHOT
+    restart: always
+    environment:
+      API_URL: http://gateway:8080/api
+    ports:
+      - "8087:80"

@@ -1,0 +1,16 @@
+### Get all professions
+
+GET http://localhost:8082/api/cars
+
+### Get single profession
+
+GET http://localhost:8082/api/cars/28bee645-87d4-4996-aecd-14449df2c070
+
+### Get single profession, not existing
+
+GET http://localhost:8082/api/cars/ac4e2683-b2ba-4695-94d9-806a97fce71e
+
+### Delete profession
+
+DELETE http://localhost:8082/api/cars/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76
+
